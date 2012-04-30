@@ -9,3 +9,5 @@ target/
 .idea/
 /.metadata/
 /runtime/
+release.properties
+*.releaseBackup
