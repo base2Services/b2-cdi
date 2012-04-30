@@ -74,6 +74,34 @@ Copyright 2012 base2Services PTY LTD
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <Git-SHA-1>${buildNumber}</Git-SHA-1>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -88,12 +116,6 @@ Copyright 2012 base2Services PTY LTD
                     <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/
                     </url>
                 </repository>
-                <snapshotRepository>
-                    <id>com.base2services.b2cdi</id>
-                    <name>base2services local Repository</name>
-                    <uniqueVersion>false</uniqueVersion>
-                    <url>file:${user.home}/maven2/</url>
-                </snapshotRepository>
             </distributionManagement>
         </profile>
         <profile>
