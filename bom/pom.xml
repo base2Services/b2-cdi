@@ -19,7 +19,7 @@ Copyright 2012 base2Services PTY LTD
 
     <groupId>com.base2services.b2cdi</groupId>
     <artifactId>b2-cdi-bom</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2</version>
 
     <packaging>pom</packaging>
     <name>b2 cdi :: Bill of Materials</name>
