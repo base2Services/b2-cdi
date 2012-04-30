@@ -42,6 +42,7 @@ Copyright 2012 base2Services PTY LTD
     <modules>
         <module>bom</module>
         <module>logging</module>
+        <module>config</module>
     </modules>
 
     <dependencyManagement>
