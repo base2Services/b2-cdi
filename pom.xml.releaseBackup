@@ -34,9 +34,9 @@ Copyright 2012 base2Services PTY LTD
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/base2Services/b2-cdi.git</connection>
-        <developerConnection>scm:git:git@github.com:base2Services/b2-cdi.git</developerConnection>
         <url>https://github.com/base2Services/b2-cdi</url>
+        <connection>scm:git:git://github.com/base2Services/b2-cdi.git</connection>
+        <developerConnection>scm:git:git://github.com/base2Services/b2-cdi.git</developerConnection>
     </scm>
 
     <modules>
