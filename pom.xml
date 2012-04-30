@@ -70,23 +70,25 @@ Copyright 2012 base2Services PTY LTD
         </plugins>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <uniqueVersion>false</uniqueVersion>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/
-            </url>
-        </repository>
-        <snapshotRepository>
-            <id>com.base2services.b2cdi</id>
-            <name>base2services local Repository</name>
-            <uniqueVersion>false</uniqueVersion>
-            <url>file:${user.home}/maven2/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <profiles>
+        <profile>
+            <id>sonatype-oss</id>
+            <distributionManagement>
+                <repository>
+                    <id>sonatype-nexus-staging</id>
+                    <name>Nexus Release Repository</name>
+                    <uniqueVersion>false</uniqueVersion>
+                    <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/
+                    </url>
+                </repository>
+                <snapshotRepository>
+                    <id>com.base2services.b2cdi</id>
+                    <name>base2services local Repository</name>
+                    <uniqueVersion>false</uniqueVersion>
+                    <url>file:${user.home}/maven2/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
         <profile>
             <id>base2</id>
             <distributionManagement>
