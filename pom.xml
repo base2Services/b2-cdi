@@ -19,7 +19,7 @@ Copyright 2012 base2Services PTY LTD
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.base2services.b2cdi</groupId>
-    <artifactId>b2-cdi-parent</artifactId>
+    <artifactId>b2-cdi</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
