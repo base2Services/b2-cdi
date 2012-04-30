@@ -93,12 +93,12 @@ Copyright 2012 base2Services PTY LTD
                 <snapshotRepository>
                     <id>base2-snapshots</id>
                     <name>base2 Nexus Snapshots</name>
-                    <url>http://maven.base2services.com/content/repositories/thirdparty/</url>
+                    <url>http://maven.base2services.com/content/repositories/base2-oss/</url>
                 </snapshotRepository>
                 <repository>
                     <id>base2-releases</id>
                     <name>base2 Nexus Release Repository</name>
-                    <url>http://maven.base2services.com/content/repositories/thirdparty/</url>
+                    <url>http://maven.base2services.com/content/repositories/base2-oss/</url>
                 </repository>
             </distributionManagement>
         </profile>
