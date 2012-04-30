@@ -41,6 +41,7 @@ Copyright 2012 base2Services PTY LTD
 
     <modules>
         <module>bom</module>
+        <module>logging</module>
     </modules>
 
     <dependencyManagement>
@@ -49,6 +50,7 @@ Copyright 2012 base2Services PTY LTD
                 <groupId>com.base2services.b2cdi</groupId>
                 <artifactId>b2-cdi-bom</artifactId>
                 <version>${project.version}</version>
+                <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>

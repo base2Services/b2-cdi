@@ -29,11 +29,13 @@ Copyright 2012 base2Services PTY LTD
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javaee6.web.spec.version>3.0.0.Final</javaee6.web.spec.version>
         <slf4j.version>1.6.4</slf4j.version>
+        <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
         <cdi.query.version>1.0.0.Alpha4-base2-03</cdi.query.version>
 
         <!--test -->
         <junit.version>4.10</junit.version>
         <mockito.version>1.9.0</mockito.version>
+        <hamcrest.version>1.2.1</hamcrest.version>
         <weld.version>1.1.5.Final</weld.version>
         <arquillian.version>1.0.0.Final</arquillian.version>
         <arquillian-weld-ee-embedded.version>1.0.0.CR2</arquillian-weld-ee-embedded.version>
@@ -63,6 +65,22 @@ Copyright 2012 base2Services PTY LTD
                 <version>${javaee6.web.spec.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- JSR-303 (Bean Validation) Implementation -->
+            <!-- Provides portable constraints such as @Email -->
+            <!-- Hibernate Validator is shipped in JBoss AS 7 -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- CDI Query Support see https://github.com/ctpconsulting/query -->
@@ -116,6 +134,27 @@ Copyright 2012 base2Services PTY LTD
                 <artifactId>mockito-all</artifactId>
                 <version>${mockito.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-core</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-library</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-integration</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>provided</scope>
             </dependency>
 
         </dependencies>
