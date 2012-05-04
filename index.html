@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="b2-cdi : base2Services CDI extensions" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>b2-cdi</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/base2Services/b2-cdi">View on GitHub</a>
+
+          <h1 id="project_title">b2-cdi</h1>
+          <h2 id="project_tagline">base2Services CDI extensions</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/base2Services/b2-cdi/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/base2Services/b2-cdi/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>b2-cdi</h1>
+
+<p>Copyright © 2012-, base2Service Pty Ptd. Licensed under ASL 2.0 License.</p>
+
+<h2>About</h2>
+
+<p>A number of CDI extensions to make the life of any JEE developer easier.</p>
+
+<h2>Developer Notes</h2>
+
+<h3>GitHub Setup</h3>
+
+<ol>
+<li>Fork Repo into your base2 github account</li>
+<li>
+<p>Run on your local machine:</p>
+
+<pre><code>git clone git@github.com:&lt;github-username&gt;/b2-cdi.git
+cd b2-cdi
+git remote add upstream git@github.com:base2Services/b2-cdi.git
+</code></pre>
+</li>
+</ol><p>You can now pull from the upstream repository to rebase your code from main repo</p>
+
+<pre><code>git pull upstream master
+</code></pre>
+
+<p>And push now push these changes to your forked repository</p>
+
+<pre><code>git push
+</code></pre>
+
+<p>Also you should run the following</p>
+
+<pre><code>git config --global user.name "Your Name"
+git config --global user.email &lt;your_email&gt;@yourdomain.com
+</code></pre>
+
+<h3>Building</h3>
+
+<p>This project using maven 3+ to build the lastest version execute:</p>
+
+<pre><code>mvn clean install
+</code></pre>
+
+<p>To execute the integration test run:</p>
+
+<pre><code>mvn clean install -Pintegration-tests
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">b2-cdi maintained by <a href="https://github.com/base2Services">base2Services</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
