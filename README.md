@@ -2,6 +2,8 @@
 
 Copyright © 2012-, base2Service Pty Ptd. Licensed under ASL 2.0 License.
 
+[![Build Status](https://buildhive.cloudbees.com/job/base2Services/job/b2-cdi/badge/icon)](https://buildhive.cloudbees.com/job/base2Services/job/b2-cdi/)
+
 ## About
 A number of CDI extensions to make the life of any JEE developer easier.
 
