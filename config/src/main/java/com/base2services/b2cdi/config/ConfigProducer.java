@@ -12,7 +12,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * TODO: add description
+ * Lookups configuration inject points using the available config resolver
+ * instances
  *
  * @author aaronwalker
  */
@@ -24,23 +25,54 @@ public class ConfigProducer {
 
     @Produces
     @Config
-    public String produceConfig(InjectionPoint ip) {
-        String value = ip.getAnnotated().getAnnotation(Config.class).value();
-        if("".equals(value)) {
-            value = ip.getMember().getName();
-        }
-        String defaultValue = ip.getAnnotated().getAnnotation(Config.class).defaultValue();
-        return resolve(value,defaultValue);
+    public String produceStringConfig(InjectionPoint ip) {
+        return resolve(ip);
     }
 
-    private String resolve(String name, String defaultValue) {
+    @Produces
+    @Config
+    public Boolean produceBooleanConfig(InjectionPoint ip) {
+        return Boolean.valueOf(resolve(ip));
+    }
+
+    @Produces
+    @Config
+    public Integer produceIntegerConfig(InjectionPoint ip) {
+        return Integer.valueOf(resolve(ip));
+    }
+
+    @Produces
+    @Config
+    public Long produceLongConfig(InjectionPoint ip) {
+        return Long.valueOf(resolve(ip));
+    }
+
+    @Produces
+    @Config
+    public Float produceFloatConfig(InjectionPoint ip) {
+        return Float.valueOf(resolve(ip));
+    }
+
+    @Produces
+    @Config
+    public Double produceDoubleConfig(InjectionPoint ip) {
+        return Double.valueOf(resolve(ip));
+    }
+
+    private String resolve(InjectionPoint ip) {
+        String name = ip.getAnnotated().getAnnotation(Config.class).value();
+        if("".equals(name)) {
+            name = ip.getMember().getName();
+        }
+        String defaultValue = ip.getAnnotated().getAnnotation(Config.class).defaultValue();
         for(ConfigResolver resolver : getResolvers()) {
             String value = resolver.resolve(name);
             if(value != null && value.length() > 0) {
                 return value;
             }
         }
-        return "".equals(defaultValue)? null : defaultValue;
+        return "".equals(defaultValue) ? null : defaultValue;
+
     }
 
     private List<ConfigResolver> getResolvers() {
