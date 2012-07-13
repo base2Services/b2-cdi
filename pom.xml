@@ -72,6 +72,7 @@ Copyright 2012 base2Services PTY LTD
                 <version>2.1</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <goals>clean install</goals>
                 </configuration>
             </plugin>
             <plugin>
