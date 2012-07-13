@@ -20,7 +20,7 @@ Copyright 2012 base2Services PTY LTD
     <parent>
         <groupId>com.base2services.b2cdi</groupId>
         <artifactId>b2-cdi</artifactId>
-        <version>0.4-SNAPSHOT</version>
+        <version>0.3-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
