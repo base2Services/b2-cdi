@@ -34,8 +34,3 @@ Also you should run the following
 This project using maven 3+ to build the lastest version execute:
 
 	mvn clean install
-
-To execute the integration test run:
-
-	mvn clean install -Pintegration-tests
-
